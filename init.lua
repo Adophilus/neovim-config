@@ -19,3 +19,9 @@ require "user.indentline"
 require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
+
+-- my additions
+require "user.prettier"
+require "user.session"
+require "user.session-lens"
+require "user.diagnostics"

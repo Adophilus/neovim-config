@@ -1,4 +1,10 @@
 vim.cmd [[
+
+  augroup _refresh_on_file_change
+    set autoread
+    au CursorHold,CursorHoldI * checktime
+  augroup end
+
   augroup _general_settings
     autocmd!
     autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR> 

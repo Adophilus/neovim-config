@@ -92,6 +92,35 @@ return packer.startup(function(use)
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "c18e016864c92ecf9775abea1baaa161c28082c3" })
 
+  -- Prettier
+  use('MunifTanjim/prettier.nvim')
+
+  -- auto-session
+  use {
+    'rmagatti/auto-session',
+    config = function()
+      require('auto-session').setup {
+        log_level = 'info',
+        auto_session_suppress_dirs = {'~/', '~/Projects'}
+      }
+    end
+  }
+  
+  -- session-lens
+  use {
+    'rmagatti/session-lens',
+    requires = {'rmagatti/auto-session', 'nvim-telescope/telescope.nvim'},
+    config = function()
+      require('session-lens').setup({--[[your custom config--]]})
+    end
+  }
+
+  -- java
+  use "mfussenegger/nvim-jdtls"
+
+  -- tetris
+  use "alec-gibson/nvim-tetris"
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
