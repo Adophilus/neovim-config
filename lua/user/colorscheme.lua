@@ -1,14 +1,3 @@
---[[
-vim.cmd [[
-try
-  colorscheme darkplus
-catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-  set background=dark
-endtry
-]]
---
-
 require('nvim-tundra').setup({
   transparent_background = false,
   dim_inactive_windows = {
